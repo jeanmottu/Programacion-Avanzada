@@ -1,0 +1,103 @@
+// Ejercicio 3 25-03-2026
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .resaltado{ background: red;}
+        .grande{font-size: 32px;}
+    </style>
+</head>
+<body> 
+
+<h1>Demo Jquery</h1>
+<h2> hide() - show() - taggle()</h2>
+<button id="btn-ocultar">Ocultar</button>
+<button id="btn-mostrar">Mostrar</button>
+<button id="btn-toggle">Toggle</button>
+
+<p id="parrafo"> este parrafo se va a manipular con jquery</p>
+<script>
+        $("#btn-ocultar").click(function(){
+            $("#parrafo").hide();
+        });
+        $("#btn-mostrar").click(function(){
+            $("#parrafo").show();
+        });
+        $("#btn-toggle").click(function(){
+            $("#parrafo").toggle();
+        });
+       </script>
+
+       <h2> 2 text () - html - val()</h2>
+       <p id="parrafo2"> este parrafo se va a manipular con jquery</p>
+    <button id="btn-text">Cambiar texto</button>
+    <button id="btn-html">Cambiar html</button>
+    <br></br>
+    <input type="text" id="mi-input">
+    <input type="text" id="input-text" placeholder="Escribe algo">
+    <p id="output-input"></p>
+
+    <script>
+        $("#btn-text").click(function(){
+            $("#parrafo2").text("El texto ha sido cambiado");
+        });
+        $("#btn-html").click(function(){
+            $(selector).html(<strong> ahora esta en negrita con jquery </strong>);
+        });
+        $("#btn-leer").click(function(){
+          const valor=$("#mi-input").val(); 
+          $('#output-input').text("Escribiste:" + valor); 
+        });
+
+        <h2> Evento - output-input </h2>
+<button id="btn contador">
+<p id="output-contador">Clics: 0 </p>
+<br>
+<input type="text" id="input-tiempo-real">
+<p id="output-tiempo real"></p>
+
+<script>
+let clics=0
+$
+
+</script>
+
+<h2> addClass()- removeClass() toggle()</h2>
+<h3 id="mi-titulo"> titulo para cambiar la letra </h3>
+<button id="btn-agrandar"> Agrandar</button>
+<button id="btn-achicar"> Achicar</button>
+<br></br>
+<p> Hace click en cada item</p>
+<ul id="mi-lista" style="list-style:none; padding:0">
+    <li style="padding:6px; border-button:1px solid #eee; curspr:ointer;">item1</li>
+    <li style="padding:6px; border-button:1px solid #eee; curspr:ointer;">item2</li>
+    <li style="padding:6px; border-button:1px solid #eee; curspr:ointer;">item3</li>
+    <li style="padding:6px; border-button:1px solid #eee; curspr:ointer;">item4</li>
+</ul>;
+<script>
+$(selector).click(function (e){
+    e.preventDefault();
+});
+</script>
+
+<script>
+$('#btn-agrandar').click(function(){
+$('#mi-titulo').addClass('grande');;
+});
+
+$('#btn-achicar').click(function(){
+$('#mi-titulo').removeClass('grande');;
+});
+
+$('#mi-lista li').click(function(){
+$(this).toggleClass('resaltado');
+
+});
+  </script>      
+</body>
+</html>
